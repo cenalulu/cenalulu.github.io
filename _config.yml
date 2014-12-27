@@ -1,10 +1,8 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Tech Blog of cenalulu
+email: cenalulu@gmail.com
+description: > # cenalulu's technical blog. It's all about MySQL, Linux.
+ What I have learnt & done or read will be written here
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://cenalulu.github.io" # the base hostname & protocol for your site
 twitter_username: cenalulu
