@@ -1,5 +1,5 @@
 # Site settings
-title: Tech Blog of cenalulu
+title: "cenalulu's Tech Blog"
 email: cenalulu@gmail.com
 description: > # cenalulu's technical blog. It's all about MySQL, Linux.
  What I have learnt & done or read will be written here
@@ -10,3 +10,5 @@ github_username:  cenalulu
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM

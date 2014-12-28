@@ -4,12 +4,16 @@ title:  "10分钟搭建一个基于github和jekyll的免费博客"
 date:   2014-12-28 01:53:43
 categories: jekyll github-pages github
 ---
+this is the first paragragh
+
+
+
+
 
 >简介：本文主要介绍如何使用jekyll搭配markdown语法，在github上搭建一个免费的博客
 
 
-
-#方案的优势
+# 方案的优势
 - github基于github-pages的博客方案完全免费，且有稳定性保障
 - 所有博文可以通过github做版本管理
 - 使用markdown语法写博客,可以专注于内容无需过度关心页面样式
@@ -17,18 +21,20 @@ categories: jekyll github-pages github
 - jekyll支持markdown to html的转换，以及YAML支持。方便跟多的样式的修改
 
 
-
-#步骤一：申请一个github-pages blog
+# 步骤一：申请一个github-pages blog
+---
 
 具体的步骤在github的帮助页面都有step-by-step的介绍，这里就照搬几张操作截图
 按照以下步骤操作以后，现在你就已经拥有一个通过github服务的blog啦！
+
 - 域名是：<username>.github.io
 - 博文存放在repository：<username>/<username>.github.io
+
 当然这也就意味着如果你手工创建一个同样规则的repository的话，github同样也会自动识别为是一个博客系统文件的项目
 
 
-
-#步骤二：在本地搭建一个jekyll环境
+# 步骤二：在本地搭建一个jekyll环境
+---
 
 如果本机已经有现成ruby基础环境
 {% highlight bash %}
@@ -49,7 +55,8 @@ jekyll new .
 {% endhighlight %}
 
 创建完本地博客目录后，可以启动jekyll的管理进程（作用相当于apache），然后就可以通过浏览器看到效果啦！
-{% highlight bash %}
+
+```
 shell> cd ~/Blog
 shell> jekyll serve
 Configuration file: /Users/michellezhou/Blog/cenalulu.github.io/_config.yml
@@ -61,27 +68,70 @@ Auto-regeneration: enabled for '/Users/michellezhou/Blog/cenalulu.github.io'
 Configuration file: /Users/michellezhou/Blog/cenalulu.github.io/_config.yml
 Server address: http://127.0.0.1:4000/
 Server running... press ctrl-c to stop.
-{% endhighlight %}
+```
 
 通过浏览器访问 http://localhost:4000/ 就可以看到如下效果:
 ![pic]({{ site.url }}/img/how_to_jekyll/1.png)
 
-#步骤三：进行一些简单的个性化配置
+
+# 步骤三：进行一些简单的个性化配置
+---
 
 由于jekyll自动生成博客框架中有较多的默认值，并且比针对github有特殊处理所以我们在把自己的第一版博客发布到github之前需要做一些个性化配置（博客名，个人信息等）。当然，如果你觉得留着这些默认值也可直接跳过这一段，直接进行发布:)
+个性化配置主要在_config.yml中进行
+
+```
+title: <title>
+email: <email>
+description: > # <description>
+twitter_username: <twitter_username>
+github_username:  <github_username>
+kramdown:
+  input: GFM
+```
+
+在post-list页面（也即index页面)增加excerpt（即文章简介功能）。将Blog根目录下的index.html修改成如下形式。
+
+```html
+
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	  {{ post.excerpt }}
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
+
+```
+
+
+## reference
+---
+
+1. https://help.github.com/articles/using-jekyll-with-pages/
+2. [build blog with jekyll and github pages](http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/)
+3. [manage post ecerpt](http://melandri.net/2013/11/24/manage-posts-excerpt-in-jekyll/)
 
 
 
+todo: 
 
-
-
-
-
-
-
-
-
-
-
-
-
+- 如何修改博客基本配置信息
+- 将截图wrap在quote里
