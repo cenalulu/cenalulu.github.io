@@ -4,11 +4,6 @@ title:  "10分钟搭建一个基于github和jekyll的免费博客"
 date:   2014-12-28 01:53:43
 categories: jekyll github-pages github
 ---
-this is the first paragragh
-
-
-
-
 
 >简介：本文主要介绍如何使用jekyll搭配markdown语法，在github上搭建一个免费的博客
 

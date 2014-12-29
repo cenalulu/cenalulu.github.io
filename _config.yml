@@ -4,7 +4,7 @@ email: cenalulu@gmail.com
 description: > # cenalulu's technical blog. It's all about MySQL, Linux.
  What I have learnt & done or read will be written here
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://cenalulu.github.io" # the base hostname & protocol for your site
+#url: "http://cenalulu.github.io" # the base hostname & protocol for your site
 twitter_username: cenalulu
 github_username:  cenalulu
 
