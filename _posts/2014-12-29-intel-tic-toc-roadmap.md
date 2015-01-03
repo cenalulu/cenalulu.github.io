@@ -2,7 +2,7 @@
 layout: post
 title:  "Intel Tick-Tock策略简介"
 date:   2014-12-29 01:53:43
-categories: CMP SMP SMT linux
+categories: [CMP SMP SMT linux]
 ---
 
 >背景：最近在定位一次硬件升级对数据库性能影响的故障的时候看了挺多Intel的白皮书。其中Intel的tic-toc策略（又称为：tick-tock）很有趣，特别几张roadmap画得很赞。因此摘录在此，已做备忘。

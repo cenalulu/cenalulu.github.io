@@ -16,6 +16,15 @@ categories: jekyll github-pages github
 - jekyll支持markdown to html的转换，以及YAML支持。方便跟多的样式的修改
 
 
+# 准备知识&名词解释
+---
+
+- Markdown: 一种语法标准，用于将一些简单的格式转换成html的语法
+- Markdown Engine: 用于将Makrdown语法的文本转换成html文件或者输出
+    - Github支持的Markdown engine: kramdown(default), redcarpet
+    - jekyll支持的Markdown engine：kramdown(default), redcarpet
+- Markdown for Vim: 
+
 # 步骤一：申请一个github-pages blog
 ---
 
@@ -44,14 +53,15 @@ gem sources -l
 {% endhighlight %}
 
 安装完jekyll以后就可以创建一个本地的博客书写目录，进入自己喜欢的路径执行以下命令。随后jekyll就会自动生成一些博客的基础文件和目录，并且包含一篇现成的博文介绍jekyll
-{% highlight bash %}
+
+~~~ bash
 mkdir -p ~/Blog && cd ~/Blog
 jekyll new .
-{% endhighlight %}
+~~~
 
 创建完本地博客目录后，可以启动jekyll的管理进程（作用相当于apache），然后就可以通过浏览器看到效果啦！
 
-```
+~~~ bash
 shell> cd ~/Blog
 shell> jekyll serve
 Configuration file: /Users/michellezhou/Blog/cenalulu.github.io/_config.yml
@@ -63,7 +73,7 @@ Auto-regeneration: enabled for '/Users/michellezhou/Blog/cenalulu.github.io'
 Configuration file: /Users/michellezhou/Blog/cenalulu.github.io/_config.yml
 Server address: http://127.0.0.1:4000/
 Server running... press ctrl-c to stop.
-```
+~~~
 
 通过浏览器访问 http://localhost:4000/ 就可以看到如下效果:
 ![pic]({{ site.url }}/img/how_to_jekyll/1.png)
@@ -85,36 +95,15 @@ kramdown:
   input: GFM
 ```
 
-在post-list页面（也即index页面)增加excerpt（即文章简介功能）。将Blog根目录下的index.html修改成如下形式。
+在post-list页面（也即index页面)增加excerpt（即文章简介功能）。将Blog根目录下的index.html中`site.pages`这一行下增加一行 {% raw %} `{{ post.excerpt }}` {% endraw %}
 
-```html
 
----
-layout: default
+# Tips
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-	  {{ post.excerpt }}
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
-
-```
+- kramdown的语法，以及对Markdown的渲染和最基础的Markdown之间有一定差别，建议查阅[kramdown官方文档](http://kramdown.gettalong.org/quickref.html)
+- 如果是Vim党，那么可以使用[vim-markdown](https://github.com/gabrielelana/vim-markdown)这个插件编辑Markdown文件
+- jekyll的html渲染时还使用了基于liquid的模板语法，如果希望在文中输出例如 {% raw %} `{{ word_to_escape }}` {% endraw %} 这样的标签可以参考[stackoverflow上的回答](http://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags)
 
 
 ## reference
