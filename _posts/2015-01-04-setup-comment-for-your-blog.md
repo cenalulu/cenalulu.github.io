@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "为Jekyll Blog添加文章评论的功能"
-date:   2014-12-29 01:53:43
+date:   2015-01-06 01:53:43
 categories: jekyll
 ---
 
