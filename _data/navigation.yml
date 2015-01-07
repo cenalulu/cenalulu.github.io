@@ -1,0 +1,19 @@
+# Site navigation links
+
+- title: Home
+  url: /
+  excerpt: 
+  image: 
+
+- title: MySQL
+  url: /mysql/
+
+- title: Linux
+  url: /linux/
+
+- title: Python
+  url: /python/
+
+- title: Jekyll
+  url: /jekyll/
+
