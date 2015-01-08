@@ -1,7 +1,8 @@
 ---
 layout: article
 title:  "为Jekyll Blog添加文章评论的功能"
-date:   2015-01-06 01:53:43
+image:
+    teaser: /teaser/disqus_teaser.png
 categories: jekyll
 ---
 

@@ -1,7 +1,6 @@
 ---
 layout: article
 title:  "Jekyll&Github Pages博客模板挑选和配置"
-date:   2014-12-29 01:53:43
 toc: true
 disqus: true
 categories: jekyll
@@ -14,11 +13,24 @@ categories: jekyll
 ## 模板挑选
 
 jekyll的模板一般会有以下几个集中挑选的地方：
+
 - [jekyllthemes.org](http://jekyllthemes.org/)
 - [jekythemes.net](https://www.jekyllthemes.net/)
 - [mademistakes](https://mademistakes.com/work/jekyll-themes/) （本博客就是从这位大神的多个jekyll模板中挑选的）
-本博客使用的是[Skinny-Bones](http://mmistakes.github.io/skinny-bones-jekyll/)
 
+对于模板的挑选原则，博主觉得有以下几个参考点：
+
+- github支持的jekyll插件有限，模板是否需要额外插件支持
+- 是否支持disqus（Blog的评论区是一个基础功能）
+- 是否支持Google AdSense（写Blog的同时能给自己带来一些额外收入当然也是不错的！2333）
+- 配置是否简单（大部分配置是否能在YAML部分完成）
+- bug修复和新功能开发的速度是否稳定
+
+按照以上几个原则进行考评后，博主选择了[Skinny-Bones](http://mmistakes.github.io/skinny-bones-jekyll/)。下文也将围绕如何安装配置Skinny-Bones展开。
+
+## 模板安装
+
+安装过程比较简单，通过`git clone`将模板代码下载到本地目录中。运行`bundle install`进行依赖包安装（原理类似于python的virtualenv）。然后用`bundle exec jekrll serve`就可以查看模板效果了。以下是安装的过程和输出
 
 ~~~ bash
 michelles-mbp:Blog michellezhou$ sudo gem install bundler
@@ -27,20 +39,6 @@ Successfully installed bundler-1.7.11
 Parsing documentation for bundler-1.7.11
 Installing ri documentation for bundler-1.7.11
 1 gem installed
-michelles-mbp:Blog michellezhou$ bun
-bundle   bundler  bunzip2
-michelles-mbp:Blog michellezhou$ bun
-bundle   bundler  bunzip2
-michelles-mbp:Blog michellezhou$ ls
-cenalulu.github.io		skinny-bones-jekyll-master	skinny-bones-jekyll-master.zip
-michelles-mbp:Blog michellezhou$ cd skinny-bones-jekyll-master
-michelles-mbp:skinny-bones-jekyll-master michellezhou$ ls
-Gemfile					_data					apple-touch-icon-precomposed.png	index.md
-Gemfile.lock				_includes				atom.xml				js
-Gruntfile.js				_layouts				css					package.json
-LICENSE					_octopress.yml				favicon.ico
-README.md				_sass					fonts
-_config.yml				_templates				images
 michelles-mbp:skinny-bones-jekyll-master michellezhou$ bundle install
 Fetching gem metadata from https://rubygems.org/........
 Using blankslate 2.1.2.4
@@ -89,8 +87,7 @@ Your bundle is complete!
 Use `bundle show [gemname]` to see where a bundled gem is installed.
 ~~~
 
-
-## 运行提示错误
+这里需要特别指出的是，如果简单的通过`jekyll serve`命令启动jekyll的话会有如下的报错。如前文所说模板是通过bundle安装独立的依赖包环境的，因此一定需要通过`bundle exec jekyll serve`才能够使用到本目录下的依赖环境正常运行
 
 ~~~ bash
 michelles-mbp:skinny-bones-jekyll-master michellezhou$ jekyll server
@@ -120,10 +117,10 @@ Configuration file: /Users/michellezhou/Blog/skinny-bones-jekyll-master/_config.
 
 ## 模板基本配置
 
-然后就是模板的配置，配置过程相对简单。比较费时的地方就是为自己的博客挑选头像和文章简介图片（teaser）。博主这里头像用PhotoEditor将照片调整到模板推荐的`120x120`大小，文章简介直接在google上搜`400x250`然后将图片放置到根目录下的`/images/`并进行配置即可
+然后就是模板的配置，配置过程相对简单。比较费时的地方就是为自己的博客挑选头像和文章简介图片（teaser）。博主这里头像用PhotoEditor将照片调整到模板推荐的`120x120`大小，文章简介直接在google上搜`400x250`然后将图片放置到根目录下的`/images/`并进行配置即可。这里需要指出的是，如果*不是*Github Project Page，那么这里的`url`配置需要留空。如果将`url`配置成自己Blog在github的地址会给本地调试带来困难。例如还未上传到github上的image将在本地调试的时候无法访问。以下是本博客的配置文件：
 
-~~~ 
-\# Site wide configuration
+~~~ bash
+# Site wide configuration
 
 title: "cenalulu's Tech Blog"
 description: "Collection of everythings I want to record down especially for tech"
@@ -132,7 +129,7 @@ teaser: teaser.jpg# 400x250 px default teaser image used in image archive grid
 locale:
 url: 
 
-\# Jekyll configuration
+# Jekyll configuration
 
 sass:
     sass_dir: _sass
@@ -144,7 +141,7 @@ gems:
   - jekyll-sitemap
 
 
-\# Site owner
+# Site owner
 owner: 
   name: cenalulu（卢钧轶）
   email: cenalulu@gmail.com
@@ -159,6 +156,7 @@ disqus-shortname: cenalulu
 ~~~
 
 下图是基本配置后的博客效果
+![blog preview](/images/jekyll/blog_preview.png)
 
 
 ## 模板页头导航配置
@@ -185,9 +183,20 @@ disqus-shortname: cenalulu
 
 ~~~
 
-当然光进行这样的配置，仅仅是做到了显示页头导航的作用。如果要使得点击每个页头标签能够跳转到对应分类的博文列表的话，还需要在根目录下建立和category名对应的文件夹，并在文件夹中放置一个`index.md`的文件用作于分类导航页的渲染。还是拿本博客举例，可以看到页头上方有：mysql, python, linux, jekyll 四个分类。那么我们就需要在blog的根目录下手工创建四个文件夹`mysql`,`python`,`linux`,`jekyll`，并且在这四个文件夹中都创建一个`index.md`。这个文件的内容决定了每个分类的首页如何展示。当然最简单快速的方法是把根目录下的`index.md`copy过来稍作修改。同时把permalink配置删掉，再把 `site.posts` 改成`site.categories.mysql`这里`mysql`替换为对应分类的名字即可。修改后的结果如下图。
+当然光进行这样的配置，仅仅是做到了显示页头导航的作用。如果要使得点击每个页头标签能够跳转到对应分类的博文列表的话，还需要在根目录下建立和category名对应的文件夹，并在文件夹中放置一个`index.md`的文件用作于分类导航页的渲染。还是拿本博客举例，可以看到页头上方有：mysql, python, linux, jekyll 四个分类。那么我们就需要在blog的根目录下手工创建四个文件夹`mysql`,`python`,`linux`,`jekyll`，并且在这四个文件夹中都创建一个`index.md`。这个文件的内容决定了每个分类的首页如何展示。当然最简单快速的方法是把根目录下的`index.md`copy过来稍作修改。同时把permalink配置删掉，再把 `site.posts` 改成`site.categories.mysql`这里`mysql`替换为对应分类的名字即可。修改后的结果如下图：
 
-~~~
+![blog preview_with_navi](/images/jekyll/blog_preview_with_navi.png)
+
+
+
+## 其他配置
+
+本文只是介绍的最基础的模板和安装配置过程。mmistake大神出品的模板界面风格迥异，但是配置却基本相同。详细可以参见他的[配置文档](https://mmistakes.github.io/skinny-bones-jekyll/getting-started/)。 而其他jekyll模板本文虽然没有涉及介绍，他们的基本安装和配置思路是基本一致的，即：下载解压，覆盖原Blog目录，基本配置，上传到github。
+由于skinny bones支持的功能非常多，博客后续也还会针对各个常用功能做详细介绍。其他常用功能例如：
+
+- disqus支持
+- google adsense支持
+- social share link支持等
 
 
 
