@@ -185,7 +185,7 @@ disqus-shortname: cenalulu
 
 ~~~
 
-当然光进行这样的配置，仅仅是做到了显示页头导航的作用。如果要使得点击每个页头标签能够跳转到对应分类的博文列表的话，还需要在根目录下建立和category名对应的文件夹，并在文件夹中放置一个`index.md`的文件用作于分类导航页的渲染。还是拿本博客举例，可以看到页头上方有：mysql, python, linux, jekyll 四个分类。那么我们就需要在blog的根目录下手工创建四个文件夹`mysql`,`python`,`linux`,`jekyll`，并且在这四个文件夹中都创建一个`index.md`。这个文件的内容决定了每个分类的首页如何展示。当然最简单快速的方法是把根目录下的`index.md`copy过来稍作修改。同时把permlink配置删掉，再把 `site.posts` 改成`site.categories.mysql`这里`mysql`替换为对应分类的名字即可。修改后的结果如下图。
+当然光进行这样的配置，仅仅是做到了显示页头导航的作用。如果要使得点击每个页头标签能够跳转到对应分类的博文列表的话，还需要在根目录下建立和category名对应的文件夹，并在文件夹中放置一个`index.md`的文件用作于分类导航页的渲染。还是拿本博客举例，可以看到页头上方有：mysql, python, linux, jekyll 四个分类。那么我们就需要在blog的根目录下手工创建四个文件夹`mysql`,`python`,`linux`,`jekyll`，并且在这四个文件夹中都创建一个`index.md`。这个文件的内容决定了每个分类的首页如何展示。当然最简单快速的方法是把根目录下的`index.md`copy过来稍作修改。同时把permalink配置删掉，再把 `site.posts` 改成`site.categories.mysql`这里`mysql`替换为对应分类的名字即可。修改后的结果如下图。
 
 ~~~
 

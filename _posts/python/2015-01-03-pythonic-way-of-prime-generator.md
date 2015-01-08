@@ -5,7 +5,10 @@ date:   2014-12-29 01:53:43
 categories: python
 ---
 
->背景：最近在刷[Project Euler](https://projecteuler.net)的题目，刷到[第十题](https://projecteuler.net/problem=10)（计算2百万以下素数的和）的时候发现之前的素数生成代码效率太低导致几分钟都出不来。于是通过不断的调优，终于得到一个能在秒级算出2百万以内的素数的generator。
+> 简介：本文主要记录了博主对一段使用python实现的素数生成代码的不断优化过程。
+
+
+> 背景：最近在刷[Project Euler](https://projecteuler.net)的题目，刷到[第十题](https://projecteuler.net/problem=10)（计算2百万以下素数的和）的时候发现之前的素数生成代码效率太低导致几分钟都出不来。于是通过不断的调优，终于得到一个能在秒级算出2百万以内的素数的generator。
 本文的调优过程基本不涉及基于数论的调优，如果您希望得到一个拥有极致性能的python素数生成代码，可以使用[pyprimes](https://pypi.python.org/pypi/pyprimes)
 
 
