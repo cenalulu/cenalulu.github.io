@@ -120,7 +120,6 @@ Configuration file: /Users/michellezhou/Blog/skinny-bones-jekyll-master/_config.
 然后就是模板的配置，配置过程相对简单。比较费时的地方就是为自己的博客挑选头像和文章简介图片（teaser）。博主这里头像用PhotoEditor将照片调整到模板推荐的`120x120`大小，文章简介直接在google上搜`400x250`然后将图片放置到根目录下的`/images/`并进行配置即可。这里需要指出的是，如果*不是*Github Project Page，那么这里的`url`配置需要留空。如果将`url`配置成自己Blog在github的地址会给本地调试带来困难。例如还未上传到github上的image将在本地调试的时候无法访问。以下是本博客的配置文件：
 
 ~~~ bash
-# Site wide configuration
 
 title: "cenalulu's Tech Blog"
 description: "Collection of everythings I want to record down especially for tech"
@@ -128,8 +127,6 @@ logo: logo.jpg # 120x120 px default image used for Twitter summary card
 teaser: teaser.jpg# 400x250 px default teaser image used in image archive grid
 locale:
 url: 
-
-# Jekyll configuration
 
 sass:
     sass_dir: _sass
@@ -141,7 +138,6 @@ gems:
   - jekyll-sitemap
 
 
-# Site owner
 owner: 
   name: cenalulu（卢钧轶）
   email: cenalulu@gmail.com
@@ -197,6 +193,8 @@ disqus-shortname: cenalulu
 - disqus支持
 - google adsense支持
 - social share link支持等
+
+当然读者也可以自己探索模板的具体配置方式，mmistake也提供了[官方配置文档](https://mmistakes.github.io/skinny-bones-jekyll/getting-started/)，同时也提供了[在线样例](https://mmistakes.github.io/skinny-bones-jekyll/)。如果读者觉得在线样例中的example page非常漂亮想要搬到自己Blog中来的话，也可以通过github的[gh-page branch](https://github.com/mmistakes/skinny-bones-jekyll/tree/gh-pages)来查看的具体markdown源文件的写法。
 
 
 
