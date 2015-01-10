@@ -40,3 +40,5 @@ tic|Skylake|10nm
 
 1. [Tick-Tock on wikipidia](http://en.wikipedia.org/wiki/Intel_Tick-Tock)
 2. [The Tick-Tock Model Through the Years](http://www.intel.com/content/www/us/en/silicon-innovations/intel-tick-tock-model-general.html)
+
+

@@ -1,6 +1,7 @@
-- 用imagemagic自动将teaser图片改成400x250大小居中白底的图片
 - 语法高亮
+- 用imagemagic自动将teaser图片改成400x250大小居中白底的图片
 - 图片边框
 - 老博客的重定向和迁移
 - 将老文章的标题改成h2
 - 博客默认的文章模板
+- sitemap和feed.xml的区别

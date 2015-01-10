@@ -31,7 +31,8 @@ categories: jekyll
 
 通过修改`_layouts/post.html`将刚才admin界面中生成的comment js代码嵌入到模板的正文后
 
-~~~ html
+{% highlight html%}
+{% raw %}
 <div id="disqus_thread"> </div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -45,7 +46,8 @@ categories: jekyll
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-~~~
+{% endraw %}
+{% endhighlight %}
 
 
 # 效果展示
