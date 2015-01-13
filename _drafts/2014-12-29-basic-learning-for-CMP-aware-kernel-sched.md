@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: article
 title:  "为CMP结构CPU优化的Linux内核调度系统"
 date:   2014-12-29 01:53:43
-categories: CMP SMP SMT linux
+categories: linux
 ---
 
 >简介：
