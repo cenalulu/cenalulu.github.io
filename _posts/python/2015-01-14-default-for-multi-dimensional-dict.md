@@ -4,6 +4,8 @@ title:  "Python中避免在给多维数组赋值之前判断key是否存在的�
 categories: python
 toc: true
 ads: true
+image:
+    teaser: /teaser/python.jpg
 ---
 
 
