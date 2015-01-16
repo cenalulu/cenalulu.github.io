@@ -23,10 +23,10 @@ ads: true
 
 推荐书籍：
 
-1. SQL Cookbook  [原版](http://book.douban.com/subject/1840666/) [中文版](http://book.douban.com/subject/2297146/) 一本循序渐进的SQL指导手册。每一种业务需求，书中都用MySQL，SQL Server，Oracle三种语法进行解析。可以顺序的作为学习书籍，也可以之后作为工具书籍查阅。
-2. The Art of SQL [原版](http://book.douban.com/subject/1776542/) [中文版](http://book.douban.com/subject/3012601/) 将SQL调优模拟成一场战役，进行战术分析。更多的是传授SQL架构设计方面的知识，实际的调优实例不多，翻译很烂，建议看原版 
-3. SQL应用重构 [原版下载]
-4. OReilly.MySQL.Stored.Procedure.Programming.Mar.2006.chm 学习MySQL 存储过程语法和编写的最好教材。虽然版本比较老，但是大部分的语法都没有变更，比较推荐。
+1. SQL Cookbook  [原版]() [中文版]() 一本循序渐进的SQL指导手册。每一种业务需求，书中都用MySQL，SQL Server，Oracle三种语法进行解析。可以顺序的作为学习书籍，也可以之后作为工具书籍查阅。
+2. The Art of SQL [原版]() [中文版]() 将SQL调优模拟成一场战役，进行战术分析。更多的是传授SQL架构设计方面的知识，实际的调优实例不多，翻译很烂，建议看原版 
+3. SQL应用重构 [原版]()
+4. OReilly.MySQL.Stored.Procedure.Programming.Mar.2006.chm [原版]() 学习MySQL 存储过程语法和编写的最好教材。虽然版本比较老，但是大部分的语法都没有变更，比较推荐。
 
 
 ---
@@ -37,9 +37,9 @@ ads: true
 
 推荐书籍：
 
-1. High Performance MySQL [下载地址] MySQL界的圣经，目前已经出到第三版。非常详细的介绍了MySQL运维的各个部分，可以通读了解，也可以作为工具书进行查阅。
-2. 深入浅出MySQL数据库开发、优化与管理维护 [下载地址] 中文原创书籍中比较适合入门的一本。教粗浅的介绍了MySQL的相关特性，比较适合MySQL运维的入门
-3. MySQL技术内幕 innodb 存储引擎 [下载地址] 很详细的从代码层面分析了Innodb的内部结构，适合深入学习innodb
+1. High Performance MySQL [原版]() [中文版]() MySQL界的圣经，目前已经出到第三版。非常详细的介绍了MySQL运维的各个部分，可以通读了解，也可以作为工具书进行查阅。
+2. 深入浅出MySQL数据库开发、优化与管理维护 [原版]() [中文版]() 中文原创书籍中比较适合入门的一本。教粗浅的介绍了MySQL的相关特性，比较适合MySQL运维的入门
+3. MySQL技术内幕 innodb 存储引擎 [原版]() [中文版]()  很详细的从代码层面分析了Innodb的内部结构，适合深入学习innodb
 
 
 ---
@@ -59,6 +59,6 @@ MySQL入门除了通过书本学习理论知识以外还有其他各种方式可
 
 推荐书籍：
 
-1.  The Art of Capacity Planning [下载地址] 作为运维免不了要做容量规划和容量预测。这本书是一个很好的开始。
-2.  Beautiful Data: The Stories Behind Elegant Data Solutions  [下载地址] 数据库运维对于数据的敏感是一个重要特质。
+1.  The Art of Capacity Planning [原版]() [中文版]() 作为运维免不了要做容量规划和容量预测。这本书是一个很好的开始。
+2.  Beautiful Data: The Stories Behind Elegant Data Solutions  [原版]() [中文版]() 数据库运维对于数据的敏感是一个重要特质。
 
