@@ -4,8 +4,8 @@ title:  "MySQL入门书籍和方法分享"
 categories: mysql
 toc: true
 ads: true
-#image:
-#    teaser: /teaser/default.jpg
+image:
+    teaser: /teaser/mysql_newbie_book.jpg
 ---
 
 > 本文罗列了一些适用于MySQL及运维入门和进阶使用的书籍。

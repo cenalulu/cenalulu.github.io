@@ -4,8 +4,8 @@ title:  "MySQL Server has gone away报错原因汇总分析"
 categories: mysql
 toc: true
 ads: true
-#image:
-#    teaser: /teaser/default.jpg
+image:
+    teaser: /teaser/mysql_has_gone_away.png
 ---
 
 > 本文将总结和汇总MySQL Server has gone away这类报错发生的原因
