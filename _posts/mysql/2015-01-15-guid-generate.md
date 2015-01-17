@@ -32,6 +32,7 @@ ads: true
 - Twitter的[Snowflake](http://engineering.twitter.com/2010/06/announcing-snowflake.html) 8字节
 - [Flikr的数据库自增](http://code.flickr.net/2010/02/08/ticket-servers-distributed-unique-primary-keys-on-the-cheap/) 4/8字节
 - [Instagram的存储过程](http://instagram-engineering.tumblr.com/post/10853187575/sharding-ids-at-instagram) 8字节
+- [基于MySQL UUID的变种](http://mysql.rjweb.org/doc.php/uuid) 16字节
 
 
 ---
@@ -53,7 +54,11 @@ ads: true
  
 - Instagram：41b ts + 13b shard id + 10b increment seq
     - 优： 开发成本低
-    - 劣： 基于postgreSQL的存储过程，较为偏门
+    - 劣： 基于postgreSQL的存储过程，通用性差
+
+- UUID变种：timestamp + machine number + random (具体见：[变种介绍](http://mysql.rjweb.org/doc.php/uuid)
+    - 优： 开发成本低
+    - 劣： 基于MySQL的存储过程，性能较差
 
 
 
