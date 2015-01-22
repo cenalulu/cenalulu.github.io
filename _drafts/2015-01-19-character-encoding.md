@@ -79,4 +79,6 @@ B18C|睂
 
 ### reference
 [如何配置Python默认字符集]({{ site.url }}/python/python-encoding)
+[字符编码笔记：ASCII，Unicode和UTF-8](http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html)
+[Unicode中文编码表](http://www.chi2ko.com/tool/CJK.htm)
 
