@@ -4,8 +4,8 @@ title:  "十分钟搞清字符集和字符编码"
 categories: linux
 toc: true
 ads: true
-#image:
-#    teaser: /teaser/default.jpg
+image:
+    teaser: /teaser/encoding.png
 ---
 
 > 本文将简述字符集，字符编码的概念。以及在遭遇乱码时的一些常用诊断技巧
