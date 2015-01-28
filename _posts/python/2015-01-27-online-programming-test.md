@@ -4,8 +4,8 @@ title:  "在线编程挑战网站列表"
 categories: python
 toc: true
 ads: true
-#image:
-#    teaser: /teaser/default.jpg
+image:
+    teaser: /teaser/codeforce.png
 ---
 
 > 列举了目前所有已知在线编程挑战网站的列表和他们的一些活动。对于coding及算法的初学者和爱好者来说都是不错的去处。
