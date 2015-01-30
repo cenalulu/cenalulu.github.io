@@ -79,7 +79,7 @@ order by a.ID;
 以下是具体问题分析：
 `length(a.Size) - length(replace(a.mSize,',',''))+1`  表示了，按照逗号分割后，改列拥有的数值数量，下面简称n
 join过程的伪代码：
-{% highlight shell %}
+{% highlight bash %}
 {% raw %}
 根据ID进行循环
 {
