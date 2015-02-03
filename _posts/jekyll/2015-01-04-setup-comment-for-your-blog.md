@@ -15,15 +15,15 @@ categories: jekyll
 
 注册过程比较简单，甚至不需要验证邮箱（当然验证邮箱才能够使用所有完整功能，博主还是建议注册后立即去邮箱进行激活）。注册成功并登陆后就可以进入自己的后台配置界面啦。
 
-![registration](/img/comment-for-jekyll/1.png)
+![registration](/images/jekyll/comment-for-jekyll/1.png)
 
 
 # 生成属于自己的comment js代码
 ---
 
 注册并登陆后，通过右上角的`settings`按钮进入`admin`界面。然后在`settings`tag下就可以进行自己的comment专区的配置了。配置完成后点击`install`即可选择想要嵌入的目标博客类型。这里我们选择`universal code`即最基本的js代码
-![config](/img/comment-for-jekyll/3.png)
-![config](/img/comment-for-jekyll/2.png)
+![config](/images/jekyll/comment-for-jekyll/3.png)
+![config](/images/jekyll/comment-for-jekyll/2.png)
 
 
 # 将js代码嵌入到Jekyll post模板中

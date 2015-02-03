@@ -175,4 +175,5 @@ mysql [localhost] {msandbox} ((none)) > select convert(0xE5BE88E5B18C using utf8
 [字符编码笔记：ASCII，Unicode和UTF-8](http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html)
 [Unicode中文编码表](http://www.chi2ko.com/tool/CJK.htm)
 [Emoji Unicode Table](http://apps.timwhitlock.info/emoji/tables/unicode)
+[Every Developer Should Know About The Encoding](http://www.joelonsoftware.com/articles/Unicode.html)
 

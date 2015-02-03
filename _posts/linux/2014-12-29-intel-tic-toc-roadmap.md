@@ -14,7 +14,7 @@ image:
 
 tic-toc是Intel从2008年引入的一个CPU研发和生产策略。简单的说就是，每一代CPU都会对应tic或者toc。如果这代CPU对应tic，那么这一代CPU相角前一代将会提升制造工艺（即更精细的纳米工艺），例如从22nm到14nm的制造工艺提升。如果这代CPU对应toc，那么这一代CPU将会进行处理器微架构升级，例如支持新功能。
 
-![tic-toc roadmap]({{ site.url }}/img/intel-tic-toc/tic-toc-roadmap.jpg)
+![tic-toc roadmap]({{ site.url }}/images/linux/intel-tic-toc/tic-toc-roadmap.jpg)
 
 
 # 近几年的tic-toc线路图

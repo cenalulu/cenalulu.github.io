@@ -76,7 +76,7 @@ Server running... press ctrl-c to stop.
 ~~~
 
 通过浏览器访问 http://localhost:4000/ 就可以看到如下效果:
-![pic]({{ site.url }}/img/how_to_jekyll/1.png)
+![pic]({{ site.url }}/images/jekyll/how_to_jekyll/1.png)
 
 
 # 步骤三：进行一些简单的个性化配置
