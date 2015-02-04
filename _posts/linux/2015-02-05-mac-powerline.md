@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "Mac上安装powerline"
+title:  "为Bash和VIM配置一个美观奢华的状态提示栏"
 categories: linux
 toc: true
 ads: true
@@ -14,7 +14,7 @@ image:
 
 ## 什么是powerline
 
-如果你不是通过搜索引擎搜到这篇文章的话，也许你还没有听说过[powerline](https://github.com/powerline/powerline)。而你又恰巧是个*UNIX党，或者VIM党的话，那么强烈建议你动手跟着我一起在自己的办公环境上安装上powerline。powerline是一个stateless status line，即一个全局状态/提示栏。如果你成功为你的`bash`,`Terminal`,`iTerm2`,`VIM`配置上powerline的话，那么效果将会是这样的：
+如果你不是通过搜索引擎搜到这篇文章的话，也许你还没有听说过[powerline](https://github.com/powerline/powerline)。而你又恰巧是个*UNIX党，或者VIM党的话，那么强烈建议你了解并使用powerline。powerline是一个stateless status line，即一个全局状态/提示栏。如果你成功为你的`bash`,`Terminal`,`iTerm2`,`VIM`配置上powerline的话，那么效果将会是这样的：
 
 Bash的提示符将会是这样的：
 ![Bash]({{ site.url }}/images/linux/powerline/bash.png)
