@@ -81,7 +81,7 @@ shell> . /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 执行完上面两步后，不出意外powerline就已经开始工作了。但是你会发现Bash提示符会和下图一样是一些非常恶心的符号。
 ![mojibake]({{ site.url }}/images/linux/powerline/moji.png)
-出现这样情况的原因是powerline为了美观自己造了一些符号，而这些符号不在Unicode字库内（如果你不知道Unicode字库是什么的话可以看下博主[以前的相关介绍]({{site.url}}linux/character-encoding/)）。所以想要powerline正常显示的话，需要安装特殊处理过的字体。好在有一位热心人的帮助，他把大部分的程序猿常用的等宽字体都打上了powerline patch使得我们的这部配置将异常简单。首先我们从github上下载并安装字体：
+出现这样情况的原因是powerline为了美观自己造了一些符号，而这些符号不在Unicode字库内（如果你不知道Unicode字库是什么的话可以看下博主[以前的相关介绍]({{site.url}}/linux/character-encoding/)）。所以想要powerline正常显示的话，需要安装特殊处理过的字体。好在有一位热心人的帮助，他把大部分的程序猿常用的等宽字体都打上了powerline patch使得我们的这部配置将异常简单。首先我们从github上下载并安装字体：
 
 {% highlight bash %}
 {% raw %}
@@ -138,3 +138,4 @@ set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusl
 [powerline](https://github.com/powerline/powerline)
 [powerline installation](https://powerline.readthedocs.org/en/latest/installation.html)
 [setup vim powerline](https://coderwall.com/p/yiot4q/setup-vim-powerline-and-iterm2-on-mac-os-x)
+[getting spiffy with powerline](http://computers.tutsplus.com/tutorials/getting-spiffy-with-powerline--cms-20740)
