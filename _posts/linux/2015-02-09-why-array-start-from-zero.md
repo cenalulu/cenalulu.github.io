@@ -67,7 +67,6 @@ ads: true
 
 - 在计算资源缺乏的过去，0标号的写法可以节省编译时间
 - 现代语言中0标号可以更优雅的表示数组字串
-- C语言中0标号可以使for循环的写法更优雅
 - 在支持指针的语言中，标号被视作是偏移量，因此从0开始更符合逻辑
 
 
@@ -80,6 +79,10 @@ ads: true
 2. [http://exple.tive.org/blarg/2013/10/22/citation-needed/]
 3. [https://plus.google.com/115212051037621986145/posts/YTUxbXYZyfi]
 4. [http://stackoverflow.com/questions/7320686/why-does-the-indexing-start-with-zero-in-c]
+
+
+
+
 
 
 
