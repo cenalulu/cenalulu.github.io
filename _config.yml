@@ -7,6 +7,13 @@ teaser: /teaser/default.jpg # 400x250 px default teaser image used in image arch
 locale:
 url:
 
+default:
+    -
+        scope:
+            type: "article"
+        values:
+            ads: false
+
 # Jekyll configuration
 
 sass:
