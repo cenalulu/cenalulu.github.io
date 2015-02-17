@@ -13,6 +13,8 @@ default:
             type: "article"
         values:
             ads: false
+            toc: false 
+
 
 # Jekyll configuration
 
