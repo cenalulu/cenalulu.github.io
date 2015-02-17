@@ -14,6 +14,10 @@ toc: true
 2. [Code Like a Pythonista: Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html#id33)
 
 
+## 博客
+
+1. [Jeff Knupp's Blog](http://www.jeffknupp.com/blog/)
+
 
 
 

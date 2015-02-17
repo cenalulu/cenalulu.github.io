@@ -98,6 +98,7 @@ blockquote {
 	padding-left: $gutter;
 	padding-right: $gutter;
 	font-style: italic;
+    border-left: 4px solid #ddd;
 	p {
 		@include font-size(16);
 	}
