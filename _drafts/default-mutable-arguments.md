@@ -13,8 +13,32 @@ toc: true
 
 ## 陷阱重现
 
+我们就用实际的举例来演示我们今天所要讨论的主要内容。
+下面一段代码定义了一个名为`generate_new_list_with`的函数。该函数的本意是在每次调用时都新建一个包含有给定`element`值的list。而实际运行结果如下: 
 
-#### 准备知识：Python变量的实现
+{% highlight python %}
+{% raw %}
+Python 2.7.9 (default, Dec 19 2014, 06:05:48)
+[GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.56)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> def generate_new_list_with(my_list=[], element=None):
+...     my_list.append(element)
+...     return my_list
+...
+>>> list_1 = generate_new_list_with(element=1)
+>>> list_1
+[1]
+>>> list_2 = generate_new_list_with(element=2)
+>>> list_2
+[1, 2]
+>>>
+{% endraw %}
+{% endhighlight %}
+
+可见代码运行结果并不和我们预期的一样。`list_2`在函数的第二次调用时并没有得到一个新的list并填入2，而是在第一次调用结果的基础上append了一个2。为什么会发生这样在其他编程语言中简直就是设计bug一样的问题呢？
+
+
+#### 准备知识：Python变量的实质
 
 
 要了解这个问题的原因我们先需要一个准备知识：那就是Python变量到底是什么？
