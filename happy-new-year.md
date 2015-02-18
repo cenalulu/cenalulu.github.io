@@ -28,7 +28,7 @@ date: 2015-02-18T22:29:58+08:00
 {% endraw %}
 {% endhighlight %}
 
-我不在6个月和小宝一起长大！速速与我reunion！
+我不在的6个月里，要和小宝一起长大！速速与我reunion！
 发红包什么的太俗了，送你一张照片吧！
 
 ![zero](/images/zero.jpg)
