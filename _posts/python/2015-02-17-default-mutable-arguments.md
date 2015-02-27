@@ -3,8 +3,8 @@ layout: article
 title:  "Python函数参数默认值的陷阱和原理深究"
 categories: python
 toc: true
-#image:
-#    teaser: /mysql/mysql-tool.png
+image:
+    teaser: /teaser/python.jpg
 ---
 
 
