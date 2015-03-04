@@ -34,7 +34,10 @@ layout: default
 				</aside>
 			</div><!-- /.content -->
 		</div><!-- /.inner-wrap -->
-		{% if page.ads %}<div class="ads">{% include advertising.html %}</div><!-- /.ads -->{% endif %}
+        <!--
+            {% if page.ads %}<div class="ads">{% include advertising.html %}</div>{% endif %} 
+        -->
+		<div class="ads">{% include about-me.html %}</div>
 	</article><!-- ./wrap -->
 </div><!-- /#main -->
 {% include env.html %}
