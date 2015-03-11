@@ -113,8 +113,8 @@ pre {
 }
 p code,
 li code {
-	@include font-size(16,no);
-	color: $text-color;
+	@include font-size(18,no);
+	color: blue;
 	white-space: nowrap;
 	margin: 0 2px;
 	padding: 0 5px;

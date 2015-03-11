@@ -4,6 +4,9 @@ title: About
 permalink: /about/
 ---
 
+> Knowing WHAT is not enough, I need to know WHY.
+
+
 ## Who am I
 
 I'm a MySQL lover, fan of basketball, black chocolate addiction.
