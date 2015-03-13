@@ -20,7 +20,7 @@ date: 2015-03-02T21:23:55+08:00
 
 > 2014年10月，我有幸通过了Facebook的电面，参加了在Palo Alto的on-site面试，并最终成功拿到了offer。期间经历了很多也有较多的东西想记录下来，以做备忘。同时在当时准备的时候，发现国内对于Facebook面试经历的分享时少之又少。因此，也想以记录的方式和大家分享经验，让更多的华人成为Facebook的一员！整个记录会分为三个大部分：面试流程，面试题集锦，入职流程和生活准备。前两部分为了避免误人子弟，我尽可能的客观描述，如非特别需要减少主观的理解在其中。
 
-> 申明：本文为本人亲身经历，为原创作品。如需转载，请在文章之前包含原文地址：<http://cenalulu.github.io/mysql/how-i-become-a-facebook-dba/>
+> 申明：本文为[本人](http://cenalulu.github.io/about/)亲身经历，为原创作品。如需转载，请在转载文章的最开头部分包含原文地址：<http://cenalulu.github.io/mysql/how-i-become-a-facebook-dba/>
 
 
 ## 第0阶段：网申

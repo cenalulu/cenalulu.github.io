@@ -111,11 +111,12 @@ MySQL返回数据是，从S编码后的二进制流在被C解码时能够无损
 - GBK单个字符编码后的取值范围是：`8140` - `FEFE` 其中不包括`**7E`，总共字符数在27000左右
 - UTF8单个字符编码后，按照字节数的不同，取值范围如下表：
 
-![charset](/images/mysql/mojibake/utf8.png)
+<img src="/images/mysql/mojibake/utf8.png" style="max-width:80%" />
 
 由于UTF-8编码能表示的字符数量远超GBK。那么我们很容易就能找到一个从UTF8到GBK的有损编码转换。我们用字符映射器（见下图）找出了一个明显就不在GBK编码表中的字符，尝试存入到GBK编码的表中。并再次取出查看有损转换的行为
 字符信息具体是：`ਅ GURMUKHI LETTER A Unicode: U+0A05, UTF-8: E0 A8 85`
-![charset](/images/mysql/mojibake/charset.png)
+
+<img src="/images/mysql/mojibake/charset.png" style="max-width:50%" />
 
 在MySQL中存储的具体情况如下：
 {% highlight mysql %}
