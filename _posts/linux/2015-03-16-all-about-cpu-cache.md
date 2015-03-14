@@ -136,6 +136,11 @@ Fully Associative 字面意思是全关联。在CPU Cache中的含义是：如�
 
 #### 什么是N-Way Set Associative
 
+为了避免以上两种设计模式的缺陷，N-Way Set Associative缓存就出现了。他的原理是把一个缓存按照N个Cache Line作为一组（set），缓存按组划为等分。这样一个64位系统的内存地址在4MB二级缓存中就划成了三个部分（见下图），低位6个bit表示在Cache Line中的偏移量，中间12bit表示Cache组号（set index），剩余的高位46bit就是内存地址的唯一id。这样的设计相较前两种设计有以下两点好处：
+
+- 给定一个内存地址可以唯一对应一个set，对于set中只需遍历16个元素就可以确定对象是否在缓存中（Full Associative中比较次数随内存大小线性增加）
+- 每`2^18(512K)*64`=`32M`的连续热点数据才会导致一个set内的conflict（Direct Mapped中512K的连续热点数据就会出现conflict）
+
 ![addr](/images/linux/cache_line/addr_bits.png)
 
 **为什么N-Way Set Associative的Set段是从低位而不是高位开始的**
@@ -147,14 +152,15 @@ Fully Associative 字面意思是全关联。在CPU Cache中的含义是：如�
 由于内存的访问通常是大片连续的，或者是因为在同一程序中而导致地址接近的（即这些内存地址的高位都是一样的）。所以如果把内存地址的高位作为set index的话，那么短时间的大量内存访问都会因为set index相同而落在同一个set index中，从而导致cache conflicts使得L2, L3 Cache的命中率低下，影响程序的整体执行效率。
 
 
-**N-Way Set Associative会存在的问题**
+**了解N-Way Set Associative的存储模式对我们有什么帮助**
 
-{% highlight python %}
-{% raw %}
->>> data_set = pd.read_csv("./result.csv",names=['bytes','time'])
->>> ggplot(data_set[:30], aes(x='bytes',y='time')) + geom_line() + ylab('Total Time(ms)') + xlab('Data Size(Bytes)')
-{% endraw %}
-{% endhighlight %}
+了解N-Way Set的概念后，我们不难得出以下结论：`2^(6Bits <Cache Line Offset> + 12Bits <Set Index>)` = `2^18` = `512K`。即在连续的内存地址中每512K都会出现一个处于同一个Cache Set中的缓存对象。也就是说这些对象都会争抢一个仅有16个空位的缓存池（16-Way Set）。而如果我们在程序中又使用了所谓优化神器的“内存对齐”的时候，这种争抢就会越发增多。效率上的损失也会变得非常明显。具体的实际测试我们可以参考： [How Misaligning Data Can Increase Performance 12x by Reducing Cache Misses](http://danluu.com/3c-conflict/#fn3) 一文。
+这里我们引用一张[Gallery of Processor Cache Effects](http://igoro.com/archive/gallery-of-processor-cache-effects/) 中的测试结果图，来解释下内存对齐在极端情况下带来的性能损失。
+![memory_align](http://igoro.com/wordpress/wp-content/uploads/2010/02/assoc_big1.png)
+
+  该图实际上是我们上文中第一个测试的一个变种。纵轴表示了测试对象数组的大小。横轴表示了每次数组元素访问之间的index间隔。而图中的颜色表示了响应时间的长短，蓝色越明显的部分表示响应时间越长。从这个图我们可以得到很多结论。当然这里我们只对内存带来的性能损失感兴趣。有兴趣的读者也可以阅读[原文](http://igoro.com/archive/gallery-of-processor-cache-effects/)分析理解其他从图中可以得到的结论。
+
+  从图中我们不难看出图中每1024个步进，即每`1024*4`即4096Bytes，都有一条特别明显的蓝色竖线。也就是说，只要我们按照4K的步进去访问内存(内存根据4K对齐），无论热点数据多大它的实际效率都是非常低的！按照我们上文的分析，如果4KB的内存对齐，那么一个80MB的数组就含有20480个可以被访问到的数组元素；而对于一个每512K就会有set冲突的16Way二级缓存，总共有`512K/20480`=`25`个元素要去争抢16个空位。那么缓存命中率只有64%，自然效率也就低了。
 
 想要知道更多关于内存地址对齐在目前的这种CPU-Cache的架构下会出现的问题可以详细阅读以下两篇文章：
 
