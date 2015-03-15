@@ -291,7 +291,7 @@ master [localhost] {msandbox} (test) > select id,hex(char_col),char_col,char_len
 
 {% highlight bash %}
 {% raw %}
-shell> mysqldump -u root -p -d --skip-set-charset --default-character-set=utf8 test charset_test_latin1 > data.sql
+shell> mysqldump -u root -p -t --skip-set-charset --default-character-set=utf8 test charset_test_latin1 > data.sql
 #确保导出的文件用文本编辑器在UTF-8编码下查看没有乱码
 shell> mysql -uroot -p -e 'create table charset_test_latin1 (id int primary key auto_increment, char_col varchar(50)) charset = utf8' test
 shell> mysql -uroot -p  --default-character-set=utf8 test < data.sql
