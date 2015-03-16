@@ -4,6 +4,8 @@ title:  "全局唯一ID生成方案对比"
 categories: mysql
 toc: true
 ads: true
+image:
+    teaser: /teaser/guid.jpg
 ---
 
 

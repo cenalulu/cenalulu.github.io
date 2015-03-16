@@ -4,8 +4,8 @@ title:  "MySQL中行列转换的SQL技巧"
 categories: mysql
 toc: true
 ads: true
-#image:
-#    teaser: /teaser/default.jpg
+image:
+    teaser: /teaser/row_col_rotate.jpg
 ---
 
 
