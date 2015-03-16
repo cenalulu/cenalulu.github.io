@@ -4,8 +4,8 @@ title:  "关于Relay Log无法自动删除的问题"
 categories: mysql
 toc: true
 ads: true
-#image:
-#   teaser: /teaser/mysql_newbie_book.jpg
+image:
+   teaser: /teaser/delete_relay.jpg
 ---
 
 > 本文介绍了一次运维实践中relay-log长期无法自动删除的原因和解决过程

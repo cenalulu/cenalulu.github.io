@@ -4,8 +4,8 @@ title:  "为什么数组标号是从0开始的"
 categories: linux
 toc: true
 ads: true
-#image:
-#    teaser: /teaser/encoding.png
+image:
+    teaser: /teaser/from_zero.jpg
 ---
 
 

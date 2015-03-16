@@ -4,8 +4,8 @@ title:  "Innodb单表数据物理恢复"
 categories: mysql
 toc: true
 ads: true
-#image:
-#    teaser: /teaser/mysql_newbie_book.jpg
+image:
+    teaser: /teaser/single_table_recovery.png
 ---
 
 > 本文将介绍使用物理备份恢复Innodb单表数据的方法
