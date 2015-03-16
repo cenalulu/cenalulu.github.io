@@ -4,6 +4,7 @@ page_ext: md
 
 # Found in _templates/
 post_layout: article
+draft_layout: article
 page_layout: article
 
 # Format titles with titlecase?

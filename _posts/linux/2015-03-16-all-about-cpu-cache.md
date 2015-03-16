@@ -33,6 +33,9 @@ date: 2015-03-11T01:01:45+08:00
 > Soon after the introduction of the cache the system got more complicated. The speed difference between the cache and the main memory increased again, to a point that another level of cache was added, bigger and slower than the first-level cache. Only increasing the size of the first-level cache was not an option for economical rea- sons.
 
 此外，又由于程序指令和程序数据的行为和热点分布差异很大，因此L1 Cache也被划分成L1i (i for instruction)和L1d (d for data)两种专门用途的缓存。
+下面[一张图](https://datatake.files.wordpress.com/2015/01/cpu-cache-access-in-cpu-cycles.png)可以看出各级缓存之间的响应时间差距，以及内存到底有多慢！
+
+![latency](/images/linux/cache_line/latency.png)
 
 ## 什么是Cache Line
 

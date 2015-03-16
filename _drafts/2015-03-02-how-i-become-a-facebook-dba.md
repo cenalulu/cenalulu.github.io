@@ -99,6 +99,11 @@ on-site面试总共是5轮，每轮严格控制在45分钟（答不完就结束�
 - 电面环境建议安静，温度合适，电话信号良好。
 - 注意保证手机电量正常
 - coding电面之前，建议先通过stypi练习一些简单的算法题
+- 关于白板题目去哪里找：[TopCoder](https://www.topcoder.com/), [Codeforces](http://codeforces.com/), [Project Euler](https://projecteuler.net) 都是不错的选择
+- 关于工资的参照, [Glassdoor](http://www.glassdoor.com/Salaries/index.htm)上给出的范围基本上很准
+- 关于家庭
+    - 收入：以Facebook的待遇，一个人养活一家三口基本不是问题，会有少许结余。
+    - 签证：Facebook的指定代理会帮一家三口搞定一切（但是不包括申请人的家长）
 
 
 
