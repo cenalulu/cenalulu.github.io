@@ -54,14 +54,18 @@ gem sources -l
 
 安装完jekyll以后就可以创建一个本地的博客书写目录，进入自己喜欢的路径执行以下命令。随后jekyll就会自动生成一些博客的基础文件和目录，并且包含一篇现成的博文介绍jekyll
 
-~~~ bash
+{% highlight bash %}
+{% raw %}
 mkdir -p ~/Blog && cd ~/Blog
 jekyll new .
-~~~
+{% endraw %}
+{% endhighlight %}
+
 
 创建完本地博客目录后，可以启动jekyll的管理进程（作用相当于apache），然后就可以通过浏览器看到效果啦！
 
-~~~ bash
+{% highlight bash %}
+{% raw %}
 shell> cd ~/Blog
 shell> jekyll serve
 Configuration file: /Users/michellezhou/Blog/cenalulu.github.io/_config.yml
@@ -73,7 +77,10 @@ Auto-regeneration: enabled for '/Users/michellezhou/Blog/cenalulu.github.io'
 Configuration file: /Users/michellezhou/Blog/cenalulu.github.io/_config.yml
 Server address: http://127.0.0.1:4000/
 Server running... press ctrl-c to stop.
-~~~
+
+{% endraw %}
+{% endhighlight %}
+
 
 通过浏览器访问 http://localhost:4000/ 就可以看到如下效果:
 ![pic]({{ site.url }}/images/jekyll/how_to_jekyll/1.png)
@@ -85,7 +92,8 @@ Server running... press ctrl-c to stop.
 由于jekyll自动生成博客框架中有较多的默认值，并且比针对github有特殊处理所以我们在把自己的第一版博客发布到github之前需要做一些个性化配置（博客名，个人信息等）。当然，如果你觉得留着这些默认值也可直接跳过这一段，直接进行发布:)
 个性化配置主要在_config.yml中进行
 
-```
+{% highlight yaml %}
+{% raw %}
 title: <title>
 email: <email>
 description: > # <description>
@@ -93,7 +101,9 @@ twitter_username: <twitter_username>
 github_username:  <github_username>
 kramdown:
   input: GFM
-```
+{% endraw %}
+{% endhighlight %}
+
 
 在post-list页面（也即index页面)增加excerpt（即文章简介功能）。将Blog根目录下的index.html中`site.pages`这一行下增加一行 {% raw %} `{{ post.excerpt }}` {% endraw %}
 
@@ -109,13 +119,8 @@ kramdown:
 ## reference
 ---
 
-1. https://help.github.com/articles/using-jekyll-with-pages/
+1. <https://help.github.com/articles/using-jekyll-with-pages/>
 2. [build blog with jekyll and github pages](http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/)
 3. [manage post ecerpt](http://melandri.net/2013/11/24/manage-posts-excerpt-in-jekyll/)
 
 
-
-todo: 
-
-- 如何修改博客基本配置信息
-- 将截图wrap在quote里
