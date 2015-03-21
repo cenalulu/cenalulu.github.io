@@ -2,7 +2,7 @@
 layout: article
 title: "NUMA -- 想说爱你不容易"
 modified:
-categories: 
+categories: linux
 #excerpt:
 #tags: []
 image:
