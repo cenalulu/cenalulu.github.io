@@ -171,6 +171,8 @@ Fully Associative 字面意思是全关联。在CPU Cache中的含义是：如�
 
   从图中我们不难看出图中每1024个步进，即每`1024*4`即4096Bytes，都有一条特别明显的蓝色竖线。也就是说，只要我们按照4K的步进去访问内存(内存根据4K对齐），无论热点数据多大它的实际效率都是非常低的！按照我们上文的分析，如果4KB的内存对齐，那么一个240MB的数组就含有61440个可以被访问到的数组元素；而对于一个每256K就会有set冲突的16Way二级缓存，总共有`256K/4K`=`64`个元素要去争抢16个空位，总共有`61440/64`=`960`个这样的元素。那么缓存命中率只有1%，自然效率也就低了。
 
+  除了这个例子，有兴趣的读者还可以查阅另一篇国人对Page Align导致效率低的实验：<http://evol128.is-programmer.com/posts/35453.html>
+
 想要知道更多关于内存地址对齐在目前的这种CPU-Cache的架构下会出现的问题可以详细阅读以下两篇文章：
 
 - [How Misaligning Data Can Increase Performance 12x by Reducing Cache Misses](http://danluu.com/3c-conflict/)
