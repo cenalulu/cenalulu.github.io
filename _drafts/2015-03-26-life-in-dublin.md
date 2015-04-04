@@ -22,3 +22,13 @@ date: 2015-03-26T01:57:51+08:00
 
 PPS: <http://www.citizensinformation.ie/en/social_welfare/irish_social_welfare_system/personal_public_service_number.html>
 GNIB: <http://www.garda.ie/controller.aspx?page=31>
+
+个人医疗保险：
+平安，13天153元，电子保单，中英对照
+
+
+PPS办理
+
+银行卡办理
+
+GNIB办理
