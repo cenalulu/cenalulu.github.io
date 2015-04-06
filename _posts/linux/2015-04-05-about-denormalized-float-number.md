@@ -5,9 +5,9 @@ modified:
 categories: linux
 #excerpt:
 #tags: []
-#image:
+image:
 #    feature: /teaser/xxx
-#    teaser: /teaser/xxx
+    teaser: /teaser/float.jpg
 #    thumb:
 date: 2015-04-05T13:42:32+01:00
 ---
