@@ -135,7 +135,7 @@ sys     0m0.003s
 
 > For example when using NVIDIA's CUDA platform, on gaming cards, calculations with double precision take 3 to 24 times longer to complete than calculations using single precision.
 
-如果要解释为什么有如此大的性能损耗，那就要需要涉及电路设计了，超出了博主的知识范围。当然万能的wiki也是有答案的，有兴趣的读者可以自行查阅。
+如果要解释为什么有如此大的性能损耗，那就要需要涉及电路设计了，超出了博主的知识范围。当然万能的wiki也是有[答案](http://en.wikipedia.org/wiki/Floating_point#Floating-point_arithmetic_operations)的，有兴趣的读者可以自行查阅。
 
 
 
