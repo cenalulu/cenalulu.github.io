@@ -77,15 +77,15 @@ shell> g++ code1.c -o test1
 shell> g++ code2.c -o test2
 shell> time ./test1
 
-real    0m9.895s
-user    0m9.871s
-sys     0m0.009s
-
-shell> time ./test2
-
 real    0m1.490s
 user    0m1.483s
 sys     0m0.003s
+
+shell> time ./test2
+
+real    0m9.895s
+user    0m9.871s
+sys     0m0.009s
 {% endraw %}
 {% endhighlight %}
 
