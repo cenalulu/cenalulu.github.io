@@ -30,7 +30,7 @@ jekyll的模板一般会有以下几个集中挑选的地方：
 
 ## 模板安装
 
-安装过程比较简单，通过`git clone`将模板代码下载到本地目录中。运行`bundle install`进行依赖包安装（原理类似于python的virtualenv）。然后用`bundle exec jekrll serve`就可以查看模板效果了。以下是安装的过程和输出
+安装过程比较简单，通过`git clone`将模板代码下载到本地目录中。运行`bundle install`进行依赖包安装（原理类似于python的virtualenv）。然后用`bundle exec jekyll serve`就可以查看模板效果了。以下是安装的过程和输出
 
 {% highlight bash %}
 {% raw %}
