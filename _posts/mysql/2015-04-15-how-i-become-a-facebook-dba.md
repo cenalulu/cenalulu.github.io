@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "我是如何拿到Facebook Offer的--面经篇"
+title: "我是如何拿到Facebook Offer的"
 modified:
 categories: mysql
 #excerpt:
@@ -9,7 +9,7 @@ image:
     feature: /teaser/facebook_feature.jpg
     teaser: /teaser/facebook.jpg
 #  thumb:
-date: 2015-03-02T21:23:55+08:00
+date: 2015-04-15T21:23:55+08:00
 ---
 
 
@@ -132,7 +132,8 @@ on-site面试总共是5轮，每轮严格控制在45分钟（答不完就结束�
 >  <http://cenalulu.github.io/mysql/2015-03-02-how-i-become-a-facebook-dba/> 
 
 或者给我发Email: cenalulu@gmail.com 所有共性的问题我都会在文章下面作答或者邮件回复。
-当然，如果你在看了本文以后有了来FB工作的念头的话，也可以把简历发到我的Email，我会帮忙走内推流程。
+当然，如果你在看了本文以后有了来FB工作的念头的话，也可以把英语简历和想要应聘的职位及应聘所在地发到我的Email，我会筛选后在平时空闲的时间帮忙走内推流程。
+具体职位见：<https://www.facebook.com/careers?_rdr>
 
 
 
