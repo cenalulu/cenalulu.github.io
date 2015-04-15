@@ -1,10 +1,6 @@
 ---
 layout: article
-<<<<<<< HEAD:_posts/mysql/2015-04-15-how-i-become-a-facebook-dba.md
 title: "我是如何拿到Facebook Offer的"
-=======
-title: "我是如何拿到Facebook Offer的--面经分享"
->>>>>>> e0a06d0d47c4bd6e62f815f3175ded05a944e4d1:_drafts/2015-03-02-how-i-become-a-facebook-dba.md
 modified:
 categories: mysql
 #excerpt:
