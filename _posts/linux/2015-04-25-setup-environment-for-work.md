@@ -24,8 +24,30 @@ date: 2015-04-25T11:44:13-07:00
 
 tmux是什么？tmux是linux中一种管理窗口的程序。那么问题来了：Mac自带的Iterm2很好用啊。既支持多标签，也支持窗体内部Panel的分割，为什么还要用tmux？其实，多标签和分割窗体只是tmux的部分功能。用tmux的主要原因是它提供了一个窗体组随时存储和恢复的功能。看看以下的使用场景是否适合你：
 
-- 公司台式机开了一堆vim和log的打印窗口下班了。到家后发现灵感突发，想要继续coding，登陆VPN，SSH连上台式后发现又要打开各种窗口，瞬间没心情了。。。FML！这个时候你就可以在你的公司台式机上装个tmux。同一组工作环境，在多处共享。
+- 公司台式机开了一堆vim和log打印窗口下班了。到家后灵感突发，想要继续coding，登陆VPN，SSH连上台式后发现又要重新打开各种窗口，瞬间没心情了。。。FML！这个时候你就可以在你的公司台式机上装个tmux。同一组工作环境，在多处共享。
 - 公司服务器上调试程序，开了一堆窗口。出去吃了个饭，发现SSH超时了，`broken pipe`。重头开始。。。FML！如果你之前使用了tmux就不会有这样的问题，attach就能找回原来打开的那些窗口。
+
+
+---
+
+
+## tmux的基本概念
+
+我们先来理解下tmux的几个元素。tmux的主要元素分为三层：
+
+- *Session* 一组窗口的集合，通常用来概括同一个任务。session可以有自己的名字便于任务之间的切换。
+- *Window* 单个可见窗口。Windows有自己的编号，也可以认为和ITerm2中的Tab类似。
+- *Pane* 窗格，被划分成小块的窗口，类似于Vim中 C-w +v 后的效果。
+
+为了更好的理解，下面是三个元素在tmux中的具体展现。
+
+![concept](/images/linux/tmux/concept.jpg)
+
+可以看到Session总在tmux的左下角显示，通常会为他命名。例如我正在写博客，开了很多窗口那么我就会把这组窗口命名为`blog`方便之后的重连和切换。而Window也会在最下方以一种Tab的形式展现。每个window都有自己的需要，也会以当前活动进程的名字命名。而Pane就比较好理解，即把单个窗口分割成若干个小块后的元素。
+
+
+---
+
 
 ## 安装
 
@@ -63,28 +85,9 @@ Linking /usr/local/Cellar/libevent/2.0.22... 25 symlinks created
 ---
 
 
-## tmux的基本概念
-
-我们先来理解下tmux的几个元素。tmux的主要元素分为三层：
-
-- *Session* 又叫`Project`，是一组窗口的集合，session可以有自己的名字用于任务之间的切换。
-- *Window* 单个可见窗口。Windows有自己的编号，也可以认为和ITerm2中的Tab类似。
-- *Pane* 窗格，被划分成小块的窗口，类似于Vim中 C-w +v 后的效果。
-
-为了更好的理解，下面是三个元素在tmux中的具体展现。
-
-![concept](/images/linux/tmux/concept.jpg)
-
-可以看到Session总在tmux的左下角显示，通常会为他命名。例如我正在写博客，开了很多窗口那么我就会把这组窗口命名为`blog`方便之后的重连和切换。而Window也会在最下方以一种Tab的形式展现。每个window都有自己的需要，也会以当前活动进程的名字命名。而Pane就比较好理解，即把单个窗口分割成若干个小块后的元素。
-
-
-
 ## tmux的基本操作
 
 `Prefix-Command`前置操作：所有下面介绍的快捷键，都必须以前置操作开始。tmux默认的前置操作是`Ctrl+b`。例如，我们想要新建一个窗体，就需要先在键盘上摁下`Ctrl+b`，松开后再摁下`n`键。
-
-
---- 
 
 
 Session相关操作
@@ -96,9 +99,6 @@ Session相关操作
 重命名当前Session| prefix $
 
 
---- 
-
-
 Window相关操作
 
 操作|快捷键
@@ -107,9 +107,6 @@ Window相关操作
 切换到上一个活动的窗口|prefix space
 关闭一个窗口|prefix &
 使用窗口号切换|prefix 窗口号
-
-
---- 
 
 
 Pane相关操作
@@ -123,6 +120,7 @@ Pane相关操作
 暂时把一个窗体放到最大|prefix z
 
 
+---
 
 
 ## tmux的一些个性化定制
@@ -148,7 +146,7 @@ $ cp .tmux/.tmux.conf.local .
 
 安装完以后就能获得以下效果了：
 
-![powerline](/images/linux/tmux_screenshot.jpg)
+![powerline](/images/linux/tmux/tmux_screenshot.png)
 
 
 
