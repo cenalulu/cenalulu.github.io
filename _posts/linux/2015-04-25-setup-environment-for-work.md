@@ -87,8 +87,9 @@ Linking /usr/local/Cellar/libevent/2.0.22... 25 symlinks created
 
 ## tmux的基本操作
 
-`Prefix-Command`前置操作：所有下面介绍的快捷键，都必须以前置操作开始。tmux默认的前置操作是`Ctrl+b`。例如，我们想要新建一个窗体，就需要先在键盘上摁下`Ctrl+b`，松开后再摁下`n`键。
+`Prefix-Command`前置操作：所有下面介绍的快捷键，都必须以前置操作开始。tmux默认的前置操作是`CTRL+b`。例如，我们想要新建一个窗体，就需要先在键盘上摁下`CTRL+b`，松开后再摁下`n`键。
 
+**下面所有的`prefix`均代表`CTRL+b`**
 
 Session相关操作
 
@@ -103,7 +104,7 @@ Window相关操作
 
 操作|快捷键
 -|-
-新建窗口|c
+新建窗口|prefix c
 切换到上一个活动的窗口|prefix space
 关闭一个窗口|prefix &
 使用窗口号切换|prefix 窗口号
