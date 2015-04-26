@@ -101,7 +101,7 @@ Window相关操作
 
 操作|快捷键
 -|-
-新建窗口|c
+新建窗口|prefix c
 切换到上一个活动的窗口|prefix space
 关闭一个窗口|prefix &
 使用窗口号切换|prefix 窗口号
