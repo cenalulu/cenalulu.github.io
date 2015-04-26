@@ -91,7 +91,7 @@ Linking /usr/local/Cellar/libevent/2.0.22... 25 symlinks created
 
 **下面所有的`prefix`均代表`CTRL+b`**
 
-Session相关操作
+#### Session相关操作
 
 操作|快捷键
 -|-
@@ -100,7 +100,7 @@ Session相关操作
 重命名当前Session| prefix $
 
 
-Window相关操作
+#### Window相关操作
 
 操作|快捷键
 -|-
@@ -110,7 +110,7 @@ Window相关操作
 使用窗口号切换|prefix 窗口号
 
 
-Pane相关操作
+#### Pane相关操作
 
 操作|快捷键
 -|-
