@@ -127,7 +127,7 @@ sys     0m0.009s
 
 ## 什么是Denormalized Number
 
-了解完浮点数的表达以后，不难看出浮点数的精度和指数范围有很大关系。最低不能低过`2^-7-1`最高不能高过`2^8-1`（其中剔除了指数部分全0喝全1的特殊情况）。如果超出表达范围那么不得不舍弃末尾的那些小数，我们成为overflow和underflow。甚至有时舍弃都无法表示，例如当我们要表示一个：`1.00001111*2^-7`这样的超小数值的时候就无法用规格化数值表示，如果不想点其他办法的话，CPU内部就只能把它当做0来处理。那么，这样做有什么问题呢？最显然易见的一种副作用就是：当多次做低精度浮点数舍弃的后，就会出现除数为0的exception，导致异常。当然精度失准严重起来也可以要人命，以下这个事件摘自[wikipedia](http://en.wikipedia.org/wiki/Floating_point#Incidents)
+了解完浮点数的表达以后，不难看出浮点数的精度和指数范围有很大关系。最低不能低过`2^-7-1`最高不能高过`2^8-1`（其中剔除了指数部分全0和全1的特殊情况）。如果超出表达范围那么不得不舍弃末尾的那些小数，我们成为overflow和underflow。甚至有时舍弃都无法表示，例如当我们要表示一个：`1.00001111*2^-7`这样的超小数值的时候就无法用规格化数值表示，如果不想点其他办法的话，CPU内部就只能把它当做0来处理。那么，这样做有什么问题呢？最显然易见的一种副作用就是：当多次做低精度浮点数舍弃的后，就会出现除数为0的exception，导致异常。当然精度失准严重起来也可以要人命，以下这个事件摘自[wikipedia](http://en.wikipedia.org/wiki/Floating_point#Incidents)
 
 > On 25 February 1991, a loss of significance in a MIM-104 Patriot missile battery prevented it intercepting an incoming Scud missile in Dhahran, Saudi Arabia, contributing to the death of 28 soldiers from the U.S. Army's 14th Quartermaster Detachment.[25] See also: Failure at Dhahran
 

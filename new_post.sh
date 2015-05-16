@@ -11,4 +11,5 @@ title=`octopress new post "$title" `
 mv $title _drafts/
 filename=${title#*/_posts/}
 echo "New Draft created as: _drafts/$filename"
+echo "_drafts/$filename" | pbcopy  
 
