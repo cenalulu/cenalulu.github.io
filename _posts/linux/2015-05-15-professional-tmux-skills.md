@@ -5,9 +5,9 @@ modified:
 categories: linux
 #excerpt:
 #tags: []
-#image:
+image:
 #    feature: /teaser/xxx
-#    teaser: /teaser/xxx
+    teaser: /teaser/tmux_pro.jpg
 #    thumb:
 date: 2015-05-15T09:44:15-07:00
 ---
