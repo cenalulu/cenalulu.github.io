@@ -5,9 +5,8 @@ modified:
 categories: linux
 #excerpt:
 #tags: []
-#image:
-#    feature: /teaser/xxx
-#    teaser: /teaser/xxx
+image:
+    teaser: /teaser/delete.jpg
 #    thumb:
 date: 2015-04-29T22:44:12-07:00
 ---
