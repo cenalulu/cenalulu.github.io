@@ -56,3 +56,9 @@ CMD + ;
 see more:
 https://our.intern.facebook.com/intern/dex/command-line-tips-and-efficiency/
 
+## Use Mosh Instead of SSH
+问题：
+延迟
+不支持“漫游”
+octet stream
+brew install mobile-shell

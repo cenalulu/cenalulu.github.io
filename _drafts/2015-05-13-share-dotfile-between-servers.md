@@ -37,3 +37,4 @@ git push origin
 {% endhighlight %}
 
 
+如何创建依赖环境的dotfile： http://soledadpenades.com/2013/05/25/using-environment-variables-for-configuring-vim/
