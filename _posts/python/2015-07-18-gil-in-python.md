@@ -2,7 +2,7 @@
 layout: article
 title: "Python的GIL是什么鬼，多线程性能究竟如何
 modified:
-categories: 
+categories: python
 #excerpt:
 #tags: []
 #image:
