@@ -1,7 +1,6 @@
 ---
 layout: article
-title: "Python的GIL是什么鬼，多线程性能究竟如何
-modified:
+title: "Python的GIL是什么鬼，多线程性能究竟如何"
 categories: python
 #excerpt:
 #tags: []
