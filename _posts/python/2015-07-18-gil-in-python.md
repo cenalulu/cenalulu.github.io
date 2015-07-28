@@ -75,9 +75,7 @@ def main():
     for tid in range(2):
         t = Thread(target=my_counter)
         t.start()
-        thread_array[tid] = t
-    for i in range(2):
-        thread_array[i].join()
+        t.join()
     end_time = time.time()
     print("Total time: {}".format(end_time - start_time))
 
