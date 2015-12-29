@@ -4,9 +4,9 @@ title: "Python的GIL是什么鬼，多线程性能究竟如何"
 categories: python
 #excerpt:
 #tags: []
-#image:
+image:
 #    feature: /teaser/xxx
-#    teaser: /teaser/xxx
+    teaser: /teaser/gil.jpg
 #    thumb:
 date: 2015-07-18T21:44:03+01:00
 ---
