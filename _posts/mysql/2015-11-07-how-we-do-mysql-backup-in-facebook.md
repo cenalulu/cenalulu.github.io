@@ -24,16 +24,13 @@ date: 2015-11-07T11:04:13+00:00
 
 
 ## 准备知识
-在进入详细介绍之前，先对简要介绍一些Facebook相关的架构基础概念。
+在进入详细介绍之前，先简要介绍一些Facebook相关的架构关键字
 
 - **python** 
-Facebook几乎所有的数据库自动化运维系统都是通过python实现的
-
-- **thrift** 
-Facebook内部各个基础服务之间使用thrift作为通讯API的定义。为了很快速的开发基于thrift通讯的python service，Facebook内部使用叫做`BaseController`的框架，同时github上也有其对应的开源版本[`sparts`](https://github.com/facebook/sparts)
+Facebook几乎所有的数据库自动化运维系统都是通过python实现的，所有可文档化的手工操作都有他对应的Python Library库来代替。此外，Facebook内部各个基础服务之间使用thrift作为通讯API的定义。为了很快速的开发基于thrift通讯的python service，Facebook内部使用叫做`BaseController`的框架，同时github上也有其对应的开源版本[`sparts`](https://github.com/facebook/sparts)。本文将提到的backup-agent也基于它实现。
 
 - **部署方式** 
-Master/Slave的部署方式，并且所有数据至少在5个机房中的2个存在副本，本文把整个集群在后文用Recpliaset表示。（5个机房分部见下图）
+Master/Slave的部署方式，并且所有数据在5个机房中都在其中的2个或两个以上存在副本，本文把整个集群在后文用Recpliaset表示。（5个机房分部见下图）
 
 - **数据备份的要素**
 任何数据备份都离不开这几个要素：备份存储形式，备份存储地，备份策略，备份有效性检验，备份来源。后文也会用这样的划分方式，对每一个要素用一个小节来具体介绍。
@@ -44,7 +41,7 @@ Master/Slave的部署方式，并且所有数据至少在5个机房中的2个存
 
 ## 备份形式
 
-Facebook的MySQL备份形式可能会让你感到有些许惊讶。我们所有的Production MySQL数据都使用mysqldump进行逻辑备份。你一定和我最早听到这个事实的时候一样疑惑：那为什么不选择更为备份/恢复速度更优的基于xtrabackup的物理备份呢？主要有以下几点原因：
+Facebook的MySQL备份形式可能会让你感到有些许惊讶。我们所有的Production MySQL数据都使用mysqldump进行逻辑备份。你一定和我最早听到这个事实的时候一样疑惑：那为什么不选择更为备份速度更快的基于xtrabackup的物理备份呢？主要有以下几点原因：
 
 - 压缩率：这个是最根本的因素。在Facebook由于数据基数巨大。1%的存储空间节省，往往等同于省下了几十万美元的经费。由于物理备份中索引的存在，逻辑备份使用gzip后的压缩率仍然明显优于物理备份。尽管我们已经大规模的使用了Innodb Compress的功能，同样的数据库逻辑备份压缩后的大小，大约是物理备份的二分之一到三分之一左右。
 - 内部服务依赖：我们的MySQL数据备份的作用并不仅仅是为了做灾难恢复。他也是数据仓库的非实时分析的基础数据来源。任何一个实验性的调研，都是以逻辑备份作为基础数据来初始化到临时数据仓库中的。而如果使用物理备份，显然要花更多得精力和人力在备份的Parse部分上。
