@@ -48,7 +48,7 @@ image:
 
 MySQL入门除了通过书本学习理论知识以外还有其他各种方式可以进行学习。
 
-1. Our Episode 链接地址 一个类似于MySQL电台的节目 ，每周会定期出一个音频讨论一个MySQL话题。 是学习MySQL&学习英语的好选择
+1. Our Episode [链接地址](http://www.oursql.com/) 一个类似于MySQL电台的节目 ，每周会定期出一个音频讨论一个MySQL话题。 是学习MySQL&学习英语的好选择
 2. MySQL Planet 几乎涵盖了所有MySQL业界大牛的博客RSS汇总。强烈建议订阅！
 3. MOOC 各类公开课程网站都会有免费得MySQL入门课程试听。这里就不一一列举了。
 
