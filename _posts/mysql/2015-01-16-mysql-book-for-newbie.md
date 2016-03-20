@@ -60,5 +60,5 @@ MySQL入门除了通过书本学习理论知识以外还有其他各种方式可
 推荐书籍：
 
 1.  The Art of Capacity Planning [原版]() [中文版]() 作为运维免不了要做容量规划和容量预测。这本书是一个很好的开始。
-2.  Beautiful Data: The Stories Behind Elegant Data Solutions  [原版]() [中文版]() 数据库运维对于数据的敏感是一个重要特质。
+2.  Beautiful Data: The Stories Behind Elegant Data Solutions  [原版]() [中文版]() 对数据的敏感对于数据库运维是一个重要特质。
 
