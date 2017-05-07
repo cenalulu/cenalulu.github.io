@@ -55,7 +55,7 @@ Facebook早在2009年就开源了OnlineSchemaChange.php.  该工具主要设计�
 
 最后我们也非常希望和开源社区一起对OSC进行改进和开发，使之能成为一个更为可靠高效的DBA工具。
 
-最后附上github的repo地址：https://github.com/facebookincubator/OnlineSchemaChange
+最后附上github的repo地址：[https://github.com/facebookincubator/OnlineSchemaChange](https://github.com/facebookincubator/OnlineSchemaChange)
 
 
 
