@@ -40,9 +40,11 @@ image:
 - [LinkBench]( https://github.com/facebook/linkbench)
 - [iibench](https://github.com/tmcallaghan/iibench-mysql) Indexed Insertion Benchmark 
 
-## data generator
+## data generator & Huge Dataset
 - [测试数据生成](http://www.generatedata.com/)
 - [地理数据生成](http://www.openstreetmap.org/)
+- [NYC Trip Record](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
+- [Flight on-time data](https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&DB_Short_Name=On-Time)
 
 ## 数据路由中间件
 - [mysql-proxy](http://dev.mysql.com/downloads/mysql-proxy/)
