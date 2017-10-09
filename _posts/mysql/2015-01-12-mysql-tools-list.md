@@ -59,3 +59,7 @@ image:
 
 ## MySQL Connector
 - [libAttachSQL](http://libattachsql.org/)
+
+## MySQL Portal/Notebook
+- [Franchise](https://franchise.cloud/)
+- [Redash](https://redash.io/)
