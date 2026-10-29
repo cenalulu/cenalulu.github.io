@@ -49,8 +49,8 @@ ads: true
 <!-- sidebar -->
 <ins class="adsbygoogle"
      style="display:inline-block;width:300px;height:600px"
-     data-ad-client="ca-pub-5984522345984184"
-     data-ad-slot="9439014959"></ins>
+     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+     data-ad-slot="XXXXXXXXXX"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
@@ -64,7 +64,7 @@ ads: true
 
 {% highlight yaml %}
   google:
-    ad-client: "ca-pub-5984522345984184"
-    ad-slot: "9439014959"
+    ad-client: "ca-pub-XXXXXXXXXXXXXXXX"
+    ad-slot: "XXXXXXXXXX"
 {% endhighlight %}
 
